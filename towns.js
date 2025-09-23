@@ -21,8 +21,26 @@ function deleteTown() {
 
 function addTown() {
 	let townName = $('#townNameForAdd').val();
+	let exists = false;
+
+	if (townName === '') {
+        $('#result').text("Please enter a town name.");
+        return;
+    }
+	
+	
+    $('#towns option').each(function() {
+        if ($(this).text() === townName) {
+            exists = true;
+        }
+    });
+
+	if (exists) {
+        $('#result').text(townName + " already exists.");
+        return;
+    }
+
 	$('#townNameForAdd').val('');
 	$('#towns').append($('<option>').text(townName));
 	$('#result').text(townName + " added.");
 }
-
