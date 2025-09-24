@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$('#btnAdd').click(addTown);
 	$('#btnDelete').click(deleteTown);
+	$('#btnShuffle').click(shuffleTowns);
 });
 
 function deleteTown() {
@@ -61,7 +62,3 @@ function shuffleTowns() {
 		}
 	}
 }
-
-$(document).ready(function() {
-	$('#btnShuffle').click(shuffleTowns);
-});
