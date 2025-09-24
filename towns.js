@@ -27,8 +27,8 @@ function addTown() {
         $('#result').text("Please enter a town name.");
         return;
     }
-	
-	
+
+
     $('#towns option').each(function() {
         if ($(this).text() === townName) {
             exists = true;
